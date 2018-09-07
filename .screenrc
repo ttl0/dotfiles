@@ -1,0 +1,50 @@
+# Allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# Tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Enables use of shift-PgUp and shift-PgDn
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+
+# Erase background with current bg color
+defbce "on"
+
+# Enable 256 color term
+term xterm-256color
+
+# Cache 30000 lines for scroll back
+defscrollback 30000
+
+hardstatus alwayslastline
+
+# Very nice tabbed colored hardstatus line
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}'
+
+# Hide hardstatus: ctrl-a f
+bind f eval "hardstatus ignore"
+
+# Show hardstatus: ctrl-a F
+bind F eval "hardstatus alwayslastline"
+startup_message off
+altscreen on
+windowlist string "%4n %h%=%f"
+shell -${SHELL}
+pow_detach_msg "Screen session for \${LOGNAME} \$:cr:\$:nl:ended"
+
+## logging
+logfile "$HOME/.log/screen.%n.%Y-%m-%d"
+
+# default windows
+screen -t Shell1  1 bash
+screen -t Shell2  2 bash
+screen -t Python  3 ipython3
+screen -t Shell4  4 bash
+screen -t Shell5  5 bash
+screen -t Shell6  6 bash
+screen -t Shell7  7 bash
+screen -t Shell8  8 bash
+screen -t Shell9  9 bash
+select 0
+bind c screen 1 # window numbering starts at 1 not 0
+bind 0 select 10
