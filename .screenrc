@@ -38,9 +38,9 @@ logfile "$HOME/.log/screen.%n.%Y-%m-%d"
 # default windows
 screen -t Shell1  1 bash
 screen -t Shell2  2 bash
-screen -t Python  3 ipython3
+screen -t Shell3  3 bash
 screen -t Shell4  4 bash
-screen -t Shell5  5 bash
+screen -t Python  5 python3
 screen -t Shell6  6 bash
 screen -t Shell7  7 bash
 screen -t Shell8  8 bash
@@ -51,3 +51,4 @@ bind 0 select 10
 
 #Enable mouse scrolling
 termcapinfo xterm* ti@:te@
+
