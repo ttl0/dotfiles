@@ -129,8 +129,6 @@ alias ae='deactivate &> /dev/null; source ./venv/bin/activate'
 alias de='deactivate'
 
 #ipython and ptpython alias
-alias py='ipython --TerminalInteractiveShell.editing_mode=vi'
 
 export PATH=$PATH:/usr/local/go/bin
-alias git=hub
-git config --global hub.protocol https
+alias py='ipython --TerminalInteractiveShell.editing_mode=vi'
