@@ -1,18 +1,18 @@
 1. Install zsh and oh my zsh
-``
+```
 sudo apt install zsh
 sh -c "$(curl -fsSL
 https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-``
+```
 If in WSL2, will need to change the window property to
     1. Select Properties
     2. Go to the tab Font
     3. Select "Dejavu Sans Mono" in the Font section (or "NsimSun")
 
 2. Install tmux.conf that mimics screen with
-``
+```
 sudo apt install tmux
-``
+```
 tmux.conf
 
 ```
@@ -45,15 +45,15 @@ bind l select-pane -R
 - This depends if its Linux or Mac
 
 5. Install NVchad
-``
+```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-``
+```
 Change theme to gatekeeper = space + th
 
 6. Change alias for vim and vi to nvim
-``
+```
 echo -e 'alias vim=nvim\nalias vi=nvim\n' >> ~/.zshrc
-``
+```
 
 tmux:
 - split vertical = ctrl-a + |
