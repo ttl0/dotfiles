@@ -14,7 +14,8 @@ If in WSL2, will need to change the window property to
 sudo apt install tmux
 ``
 tmux.conf
-``
+
+```
 # make CTRL+a the 'prefix' ala screen.
 bind C-a send-prefix
 set -g prefix C-a
@@ -37,18 +38,19 @@ bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
-``
+```
+
 
 4. Install NeoVIM 0.9.0+ (doesn't come with default apt install of Debian)
 - This depends if its Linux or Mac
 
-4. Install NVchad
+5. Install NVchad
 ``
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ``
 Change theme to gatekeeper = space + th
 
-5. Change alias for vim and vi to nvim
+6. Change alias for vim and vi to nvim
 ``
 echo -e 'alias vim=nvim\nalias vi=nvim\n' >> ~/.zshrc
 ``
