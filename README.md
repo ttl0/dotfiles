@@ -13,44 +13,17 @@ If in WSL2, will need to change the window property to
 ```
 sudo apt install tmux
 ```
-tmux.conf
 
-```
-# make CTRL+a the 'prefix' ala screen.
-bind C-a send-prefix
-set -g prefix C-a
-# get rid of the tmux standard of CTRL+b
-unbind C-b
-set -s escape-time 1
-set -g base-index 1
-setw -g pane-base-index 1
-
-# make it easy to reload the config (CTRL+r)
-bind r source-file ~/.tmux.conf \; display "Config reloaded!"
-
-# HA! SEE THIS SCREEN? WE CAN SPLIT BOTH WAYS WITHOUT BREAKING VERSIONS.
-bind | split-window -h
-bind - split-window -v
-
-bind -r C-Tab next-window
-# and it was said... GIVE ME VI BINDINGS
-bind h select-pane -L
-bind j select-pane -D
-bind k select-pane -U
-bind l select-pane -R
-```
-
-
-4. Install NeoVIM 0.9.0+ (doesn't come with default apt install of Debian)
+3. Install NeoVIM 0.9.0+ (doesn't come with default apt install of Debian)
 - This depends if its Linux or Mac
 
-5. Install NVchad
+4. Install NVchad
 ```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
 Change theme to gatekeeper = space + th
 
-6. Change alias for vim and vi to nvim
+5. Change alias for vim and vi to nvim
 ```
 echo -e 'alias vim=nvim\nalias vi=nvim\n' >> ~/.zshrc
 ```
